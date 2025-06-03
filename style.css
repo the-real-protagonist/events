@@ -1,0 +1,194 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  overflow-x: hidden;
+
+}
+
+.bg-image {
+  background-image: url(animebg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+
+  
+}
+
+.filter-blur {
+  background: rgba(81, 41, 41, 0.5);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.verticalhead {
+  position: fixed;
+  top: 40%;
+  left: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Limelight', cursive;
+  font-size: 6.23rem;
+  color: white;
+  text-shadow: 0 0 8px white;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.verticalhead::after {
+  content: '';
+  width: 3px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  left: 120px;
+  top: 10px;
+  text-shadow: 0 0 8px white;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 60px 60px 60px 200px;
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 310px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 6px solid #fff;
+  background-color: #000;
+  z-index: 2;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.card-body {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 17, 18, 0.5);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: bottom 0.6s ease-in-out;
+}
+
+.card:hover .card-body {
+  bottom: 0;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.date,
+.venue,
+.reg-fee {
+  font-size: 16px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.reg {
+  color: rgb(145, 2, 2);
+  background: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  width: 220px;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px;
+}
+/* Animate verticalhead letters */
+.verticalhead span {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease-out forwards;
+  display: block;
+  margin: 10px 0;
+}
+
+
+.verticalhead span:nth-child(1) { animation-delay: 0s; }
+.verticalhead span:nth-child(2) { animation-delay: 0.1s; }
+.verticalhead span:nth-child(3) { animation-delay: 0.2s; }
+.verticalhead span:nth-child(4) { animation-delay: 0.3s; }
+.verticalhead span:nth-child(5) { animation-delay: 0.4s; }
+.verticalhead span:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.verticalhead::after {
+  content: '';
+  width: 3px;
+  height: 0;
+  background-color: white;
+  position: absolute;
+  left: 120px;
+  top: 10px;
+  animation: growLine 1s ease-out forwards 0.6s;
+}
+
+@keyframes growLine {
+  to {
+    height: 100%;
+  }
+}
+.verticalhead {
+  line-height: 1; 
+  letter-spacing: 2px; 
+}
