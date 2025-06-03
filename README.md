@@ -15,6 +15,7 @@ A visually engaging event card layout built using HTML and CSS. It showcases mul
 - CSS (Flexbox & Grid)  
 
 # Preview
+![Event Card Screenshot](eventcard.jpg)
 
 
 ##  License
