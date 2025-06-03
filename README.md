@@ -1,6 +1,7 @@
 # Event Cards
 
-A visually engaging event card layout built using HTML and CSS. It showcases multiple events in a responsive, animated card-based UI, with hover effects revealing event details and a registration button.
+This project displays a series of stylized event cards with images, interactive hover effects, and animated elements. Each card reveals event details such as title, date, venue, and a registration button on hover. A fixed vertical heading adds a creative flair, while a blurred overlay enhances readability against the background. The layout uses modern CSS Grid for responsiveness and clean structure.
+
 
 # Features
 
