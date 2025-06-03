@@ -17,6 +17,9 @@ A visually engaging event card layout built using HTML and CSS. It showcases mul
 # Preview
 ![Event Card Screenshot](eventcard.png)
 
+## 🔗 Live Demo
+
+[Click here to try the live demo 🚀](https://the-real-protagonist.github.io/events/)
 
 ##  License
 
